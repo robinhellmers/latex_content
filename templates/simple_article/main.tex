@@ -1,0 +1,50 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{parskip}
+\usepackage{fullpage}
+\usepackage{import}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage[hidelinks]{hyperref}
+\usepackage[shortlabels]{enumitem}
+\usepackage{bold-extra} % \tttbf
+\usepackage{xcolor}
+\usepackage[cache=false]{minted} % linenos = numbering
+\usepackage{textcomp} % texttildelow
+\usepackage{blindtext}
+
+\import{tex/extra/newcommands/}{body.tex}
+
+\import{tex/extra/subsections_depth/}{body.tex}
+
+\import{tex/predocument/settings/}{body.tex}
+
+\title{Simple article}
+\author{Robin Hellmers}
+
+
+% Ifdefined -> Include
+% Comment out to exclude from compilation
+\def\sectionName{}
+    \def\subsectionName{}
+        \def\subsubsectionName{}
+            \def\subsubsubsectionName{}
+                \def\subsubsubsubsectionName{}
+\def\codeExamples{}
+
+
+\begin{document}
+    
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+
+\import{tex/sections/}{body.tex}
+
+
+\end{document}
